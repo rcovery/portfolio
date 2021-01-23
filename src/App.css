@@ -9,6 +9,7 @@
     --bg0: #141C2A;
     --bg1: #2E3340;
     --bg2: #282A36;
+    --bg3: #2E3340;
     --pink: #ff79c6;
     --green: #3BBA9C;
     --white1: #FFF;
@@ -69,7 +70,7 @@ main{
 }
 
 .contactSvg{
-    margin-top: 50px;
+    margin: 50px 0;
 }
 .contactSvg svg{
     z-index: 1;
@@ -84,7 +85,12 @@ main{
     background: var(--bg1);
 }.card .normal{
     margin-bottom: 25px;
+}.card + .card{
+    margin-top: 20px;
 }
-/*.one{
-    width: 40%;
-}*/
+.one{
+    background: var(--bg3);
+}.two{
+    background-image: url('assets/wave.svg');
+    background-repeat: no-repeat;
+}

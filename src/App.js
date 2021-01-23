@@ -55,7 +55,12 @@ function App(){
                     <p className="subtitle">What I Do</p>
                     <p className="normal">asdadsa idajwi dsia jijd iajdwij</p>
                 </div>
+                <div className="card">
+                    <p className="subtitle">What I Do</p>
+                    <p className="normal">asdadsa idajwi dsia jijd iajdwij</p>
+                </div>
             </div>
+            
         </main>
     )
 }
