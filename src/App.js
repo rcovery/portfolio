@@ -50,17 +50,18 @@ function App(){
 
                 <ContactIcon />
             </div>
-            <div className="block two">
-                <div className="card">
-                    <p className="subtitle">What I Do</p>
-                    <p className="normal">asdadsa idajwi dsia jijd iajdwij</p>
-                </div>
-                <div className="card">
-                    <p className="subtitle">What I Do</p>
-                    <p className="normal">asdadsa idajwi dsia jijd iajdwij</p>
+            <div className="testclass">
+                <div className="block two">
+                    <div className="card">
+                        <p className="subtitle">About me</p>
+                        <p className="normal">asdadsa aerreraere eaweaease aee idajwi dsia jijd iajdwij</p>
+                    </div>
+                    <div className="card">
+                        <p className="subtitle">What I Do</p>
+                        <p className="normal">asdadsa idajwi dsia jijd iajdwij</p>
+                    </div>
                 </div>
             </div>
-            
         </main>
     )
 }

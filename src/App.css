@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap');
 
-
 *{
     margin: 0; padding: 0;
 }
@@ -93,4 +92,42 @@ main{
 }.two{
     background-image: url('assets/wave.svg');
     background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 800px){
+    body{
+        padding: 25px;
+    }main{
+        display: flex;
+    }.testclass{
+        position: fixed;
+        left: 410px;
+        right: 25px;
+    }
+    .one{
+        position: absolute;
+        width: 360px;
+        border-radius: 20px;
+        height: 92vh;
+        grid-area: area;
+    }
+    #pic{
+        margin: 0;
+        width: 190px;
+    }
+    .two{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        background-image: none;
+        flex-direction: column;
+    }.card{
+        height: 100%;
+        width: 100%;
+    }.card + .card{
+        margin: 0;
+    }.card .normal{
+        margin: 0 10px 25px 10px;
+    }
 }
