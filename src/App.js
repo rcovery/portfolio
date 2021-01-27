@@ -33,24 +33,24 @@ function App(){
 
                 <p data-aos="zoom-out" data-aos-duration="1000" className="subtitle">Skills</p>
                 
-                <div className="slideDiv"><Splide options={{
+                <div className="slideDiv" data-aos="fade-down" data-aos-duration="1000"><Splide options={{
                     type: 'loop',
                     pagination: false
                 }}>
                     <SplideSlide>
-                        <img className="pic_slide" data-aos="fade-down" data-aos-duration="1000" alt="It's me" src={pic}></img>
+                        <img className="pic_slide" alt="It's me" src={pic}></img>
                     </SplideSlide>
                     <SplideSlide>
-                        <img className="pic_slide" data-aos="fade-down" data-aos-duration="1000" alt="It's me" src={pic}></img>
+                        <img className="pic_slide" alt="It's me" src={pic}></img>
                     </SplideSlide>
                     <SplideSlide>
-                        <img className="pic_slide" data-aos="fade-down" data-aos-duration="1000" alt="It's me" src={pic}></img>
+                        <img className="pic_slide" alt="It's me" src={pic}></img>
                     </SplideSlide>
                 </Splide></div>
 
                 <ContactIcon />
             </div>
-            <div className="testclass">
+            <div className="secondArea">
                 <div className="block two">
                     <div className="card">
                         <p className="subtitle">About me</p>
