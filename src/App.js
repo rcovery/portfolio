@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import pic from './assets/profile_pic.jpg';
+import Repo from './components/project';
 
 // IMPORT AOS
 import "./libs/aos.css";
@@ -61,7 +62,9 @@ function App(){
                         <p className="normal">asdadsa idajwi dsia jijd iajdwij</p>
                     </div>
                 </div>
+                <Repo />
             </div>
+            
         </main>
     )
 }
