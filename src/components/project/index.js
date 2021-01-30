@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import api from '../../services/github.js';
+import styled from 'styled-components';
+
+const ProjectGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+`
+
+const Project = styled.div`
+    &hover {
+        background-color: white;
+    }
+`
 
 class Repo extends Component{
     state = {
@@ -16,11 +29,14 @@ class Repo extends Component{
         const {repos} = this.state
 
         return (
-            <div>
-            {repos.map(item => (
-                <p>{item.name}</p>
-            ))}
-            </div>
+            <ProjectGrid>
+                {repos.map((item, index) => (
+                    <Project key={index.toString()} className="card">
+                        <p className="subtitle">{item.name}</p>
+                        {item.description}
+                    </Project>
+                ))}
+            </ProjectGrid>
         )
     }
 }
