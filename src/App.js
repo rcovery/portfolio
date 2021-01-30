@@ -2,14 +2,11 @@ import React from 'react';
 import './App.css';
 import pic from './assets/profile_pic.jpg';
 import Repo from './components/project';
+import Carousel from 'react-elastic-carousel';
 
 // IMPORT AOS
 import "./libs/aos.css";
 import AOS from 'aos';
-
-//IMPORT SPLIDER
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 function ContactIcon(){
     return(
@@ -27,43 +24,24 @@ function App(){
     return (
         <main>
             <div className="block one">
-                <img data-aos="fade-down" data-aos-duration="1000" id="pic" alt="It's me" src={pic}></img>
+                <img loading="lazy" data-aos="fade-down" data-aos-duration="1000" id="pic" alt="It's me" src={pic}></img>
 
-                <p data-aos="zoom-out" data-aos-duration="1000" className="title">Lorem I. Ipsum</p>
-                <p className="normal">Normal <span className="green">text</span> -- <span className="pink">highlight</span></p>
+                <div><p data-aos="zoom-out" data-aos-duration="1000" className="title">Lorem I. Ipsum</p>
+                <p className="normal">Normal <span className="green">text</span> -- <span className="pink">highlight</span></p></div>
 
-                <p data-aos="zoom-out" data-aos-duration="1000" className="subtitle">Skills</p>
-                
-                <div className="slideDiv" data-aos="fade-down" data-aos-duration="1000"><Splide options={{
-                    type: 'loop',
-                    pagination: false
-                }}>
-                    <SplideSlide>
-                        <img className="pic_slide" alt="It's me" src={pic}></img>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <img className="pic_slide" alt="It's me" src={pic}></img>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <img className="pic_slide" alt="It's me" src={pic}></img>
-                    </SplideSlide>
-                </Splide></div>
+                <div style={{width: 100 + '%'}}>
+                    <Carousel pagination={false} enableAutoPlay={true} onPrevStart={onPrevStart} onNextStart={onNextStart}>
+                        <img alt="skill" src={pic}></img>
+                        <img alt="skill" src={pic}></img>
+                    </Carousel>
+                </div>
 
                 <ContactIcon />
             </div>
-            <div className="secondArea">
-                <div className="block two">
-                    <div className="card">
-                        <p className="subtitle">About me</p>
-                        <p className="normal">asdadsa aerreraere eaweaease aee idajwi dsia jijd iajdwij</p>
-                    </div>
-                    <div className="card">
-                        <p className="subtitle">What I Do</p>
-                        <p className="normal">asdadsa idajwi dsia jijd iajdwij</p>
-                    </div>
-                </div>
-                <Repo />
+            <div className="card">
+                <p className="normal">Alguém</p>
             </div>
+            <Repo />
             
         </main>
     )
