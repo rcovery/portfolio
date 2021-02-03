@@ -10,7 +10,8 @@ const ProjectGrid = styled.div`
 `
 
 const Project = styled.div`
-    &hover {
+    transition: 0.2s;
+    &:hover {
         background-color: white;
     }
 `
@@ -32,8 +33,10 @@ class Repo extends Component{
             <ProjectGrid>
                 {repos.map((item, index) => (
                     <Project key={index.toString()} className="card">
+                        <br />
                         <p className="subtitle">{item.name}</p>
-                        {item.description}
+                        <p className="normal">{item.description}</p>
+                        <br />
                     </Project>
                 ))}
             </ProjectGrid>
