@@ -16,8 +16,11 @@ html{
     --green: #3BBA9C;
     --white1: #FFF;
     --white2: #ddd;
+    --spacement: 20px;
+    --heigth: 93.5vh;
 }
 body{
+    padding: 10px;
     background: var(--bg2);
 }
 
@@ -72,6 +75,7 @@ main{
 }
 
 .one{
+    border-radius: 20px;
     background: var(--bg3);
 }
 
@@ -79,12 +83,38 @@ main{
     border-radius: 15px;
     width: 100%;
     background-color: var(--bg1);
+}.card .normal{
+    margin: 0 20px;
+}
+.skillImg{
+    border-radius: 100%;
+    width: 120px;
 }
 
+.separator{
+    width: 100%;
+    margin-top: 50px;
+}
 
-@media only screen and (min-width: 800px){
+.infoArea{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+
+.secondArea{
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 850px){
+    main{
+        display: flex;
+        flex-direction: row;
+    }
     body{
-        padding: 25px;
+        padding: 20px;
     }
 
     #pic{
@@ -92,11 +122,30 @@ main{
         width: 150px;
     }
     
+    .contactSvg svg{
+        transition: 0.2s;
+    }
     .contactSvg svg:hover{
         fill: var(--pink);
         filter: drop-shadow(0 0 5px var(--pink))
                 drop-shadow(0 0 10px var(--pink))
                 drop-shadow(0 0 15px var(--pink))
                 drop-shadow(0 0 30px var(--pink));
+    }
+
+    .one{
+        height: var(--heigth);
+        width: 360px;
+    }
+
+    .contactSvg{
+        margin: 0 0 10px 0;
+    }
+
+    .second{
+        width: 100vw;
+        height: var(--heigth);
+        margin-left: var(--spacement);
+        margin-top: 0;
     }
 }

@@ -2,7 +2,9 @@ import React from 'react';
 import './App.css';
 import pic from './assets/profile_pic.jpg';
 import Repo from './components/project';
-import Carousel from 'react-elastic-carousel';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 // IMPORT AOS
 import "./libs/aos.css";
@@ -29,20 +31,45 @@ function App(){
                 <div><p data-aos="zoom-out" data-aos-duration="1000" className="title">Lorem I. Ipsum</p>
                 <p className="normal">Normal <span className="green">text</span> -- <span className="pink">highlight</span></p></div>
 
-                <div style={{width: 100 + '%'}}>
-                    <Carousel pagination={false} enableAutoPlay={true} onPrevStart={onPrevStart} onNextStart={onNextStart}>
-                        <img alt="skill" src={pic}></img>
-                        <img alt="skill" src={pic}></img>
-                    </Carousel>
+                <div className="separator">
+                    <p className="subtitle">Skills</p>
+                    <Splide options={{
+                        type: 'loop',
+                        perPage: 2.2,
+                        gap: '2rem',
+                        pagination: false
+                    }}>
+                        <SplideSlide>
+                            <img alt="skill" className="skillImg" src={pic}></img>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <img alt="skill" className="skillImg" src={pic}></img>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <img alt="skill" className="skillImg" src={pic}></img>
+                        </SplideSlide>
+                    </Splide>
                 </div>
 
                 <ContactIcon />
             </div>
-            <div className="card">
-                <p className="normal">Alguém</p>
+            <div className="second">
+                <div className="infoArea">
+                    <div className="card">
+                        <br />
+                        <p className="subtitle">About me</p>
+                        <p className="normal">I'm a <span className="green">Web Developer</span></p>
+                        <br />
+                    </div>
+                    <div className="card">
+                        <br />
+                        <p className="subtitle">What I do</p>
+                        <p className="normal">I do pretty, optimized and responsive <span className="pink">websites</span></p>
+                        <br />
+                    </div>
+                </div>
+                <Repo />
             </div>
-            <Repo />
-            
         </main>
     )
 }
