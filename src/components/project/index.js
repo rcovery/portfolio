@@ -12,7 +12,8 @@ const ProjectGrid = styled.div`
 const Project = styled.div`
     transition: 0.2s;
     &:hover {
-        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 3px 3px 2px var(--pink);
     }
 `
 
