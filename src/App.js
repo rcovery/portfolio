@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import pic from './assets/profile_pic.jpg';
 import Repo from './components/project';
+import FormEmail from './components/sendmail';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
@@ -41,12 +42,15 @@ function App(){
                     }}>
                         <SplideSlide>
                             <img alt="skill" className="skillImg" src={pic}></img>
+                            <p>Aaaaa</p>
                         </SplideSlide>
                         <SplideSlide>
                             <img alt="skill" className="skillImg" src={pic}></img>
+                            <p>Aaaaa</p>
                         </SplideSlide>
                         <SplideSlide>
                             <img alt="skill" className="skillImg" src={pic}></img>
+                            <p>Aaaaa</p>
                         </SplideSlide>
                     </Splide>
                 </div>
@@ -63,12 +67,13 @@ function App(){
                     </div>
                     <div className="card">
                         <br />
-                        <p className="subtitle">What I do</p>
+                        <p className="subtitle">What I do?</p>
                         <p className="normal">I do pretty, optimized and responsive <span className="pink">websites</span></p>
                         <br />
                     </div>
                 </div>
                 <Repo />
+                <FormEmail />
             </div>
         </main>
     )

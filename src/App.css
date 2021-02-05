@@ -8,7 +8,7 @@ html{
     overflow-x: hidden;
 }
 :root{
-    --bg0: #141C2A;
+    --bg0: #151b26;
     --bg1: #2E3340;
     --bg2: #282A36;
     --bg3: #2E3340;
@@ -39,9 +39,7 @@ p{
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.normal{
-    margin-top: 15px;
-}.pink{
+.pink{
     color: var(--pink);
 }.green{
     color: var(--green);
@@ -97,7 +95,8 @@ main{
 }
 
 .infoArea{
-    margin-bottom: 10px;
+    margin-top: var(--spacement);
+    margin-bottom: var(--spacement);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-row-gap: 15px;
@@ -118,7 +117,6 @@ main{
     }
 
     #pic{
-        margin: 0;
         width: 150px;
     }
     
@@ -134,16 +132,31 @@ main{
     }
 
     .one{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        left: var(--spacement);
         height: var(--heigth);
         width: 360px;
     }
 
     .contactSvg{
-        margin: 0 0 10px 0;
+        margin: 0 0 var(--spacement) 0;
+    }
+
+    .separator{
+        margin-top: 0;
+    }
+
+    .infoArea{
+        margin-top: 0;
     }
 
     .second{
-        width: 100vw;
+        position: absolute;
+        left: calc(var(--spacement) + 360px);
+        right: var(--spacement);
         height: var(--heigth);
         margin-left: var(--spacement);
         margin-top: 0;
